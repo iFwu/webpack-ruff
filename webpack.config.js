@@ -4,7 +4,8 @@ module.exports = {
   entry: './presrc/index.js',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'src')
+    path: path.resolve(__dirname, 'src'),
+    libraryTarget: 'commonjs'
   },
   module: {
     rules: [
@@ -19,5 +20,6 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  target: 'node'
 }
