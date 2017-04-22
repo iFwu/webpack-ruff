@@ -6,3 +6,7 @@ test/**
 *.zip
 
 .*
+yarn.lock
+webpack.config.js
+hello
+presrc/**

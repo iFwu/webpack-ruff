@@ -4,11 +4,31 @@
     "description": "Using webpack to packaging modules for ruff sdk. Thus, you can import npm package without worring about the source files size, because webpack can handle modules' dependencies.",
     "author": "blanu",
     "main": "src/index.js",
+    "scripts": {
+        "build": "webpack -p",
+        "deploy": "rap deploy -s"
+    },
     "ruff": {
         "boards": {
             "ruff-mbd-v1": "^4.2.2",
             "*": "*"
         },
         "dependencies": {}
+    },
+    "devDependencies": {
+        "babel-core": "^6.24.1",
+        "babel-loader": "^7.0.0",
+        "babel-preset-env": "^1.4.0",
+        "eslint": "^3.19.0",
+        "eslint-config-standard": "^10.2.1",
+        "eslint-plugin-import": "^2.2.0",
+        "eslint-plugin-node": "^4.2.2",
+        "eslint-plugin-promise": "^3.5.0",
+        "eslint-plugin-standard": "^3.0.1",
+        "webpack": "^2.4.1"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "redux": "^3.6.0"
     }
 }
