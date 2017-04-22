@@ -1,0 +1,14 @@
+{
+    "name": "ruff-webpack",
+    "version": "0.1.0",
+    "description": "Using webpack to packaging modules for ruff sdk. Thus, you can import npm package without worring about the source files size, because webpack can handle modules' dependencies.",
+    "author": "blanu",
+    "main": "src/index.js",
+    "ruff": {
+        "boards": {
+            "ruff-mbd-v1": "^4.2.2",
+            "*": "*"
+        },
+        "dependencies": {}
+    }
+}
