@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'src'),
-    libraryTarget: 'var'
+    libraryTarget: 'commonjs'
   },
   module: {
     rules: [
