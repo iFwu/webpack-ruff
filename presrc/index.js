@@ -1,6 +1,6 @@
 import { turnOffAll } from './util'
 // npm modules need to use require()
-const Redux = require('redux')
+import { createStore } from 'redux'
 
 function counter (state = 0, action) {
   switch (action.type) {
@@ -12,21 +12,21 @@ function counter (state = 0, action) {
       return state
   }
 }
-const store = Redux.createStore(counter)
+const store = createStore(counter)
 
-const increase = () => {
+var increase = function increase () {
   store.dispatch({
     type: 'INCREMENT'
   })
 }
-const decrease = () => {
+var decrease = function decrease () {
   store.dispatch({
     type: 'DECREMENT'
   })
 }
 
-const unsubscribe = store.subscribe(() => {
-  const state = store.getState()
+var unsubscribe = store.subscribe(function () {
+  var state = store.getState()
   console.log(state)
   if (state > 0) {
     turnOffAll('g')
@@ -42,19 +42,19 @@ const unsubscribe = store.subscribe(() => {
   }
 })
 
-$.ready((error) => {
+$.ready(function (error) {
   if (error) {
     console.log(error)
     return
   }
-  $('#button-k2').on('push', () => {
+  $('#button-k2').on('push', function () {
     increase()
   })
-  $('#button-k3').on('push', () => {
+  $('#button-k3').on('push', function () {
     decrease()
   })
 })
 
-$.end(() => {
+$.end(function () {
   unsubscribe()
 })

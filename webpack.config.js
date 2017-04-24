@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'src'),
-    libraryTarget: 'commonjs'
+    libraryTarget: 'var'
   },
   module: {
     rules: [
@@ -15,7 +15,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            presets: [['es2015', { 'modules': false }]]
           }
         }
       }
